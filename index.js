@@ -12,9 +12,8 @@ app.get('/', (req, res) => {
 })
 
 app.post('/post.html', function(request, res) {
-let variable = request.body.p1; 
-console.log(isAlphaNumeric.check(variable));
-if (isAlphaNumeric.check(variable)) res.send(variable)
+let variable = request.body.variable; 
+if (isAlphaNumeric(variable)) res.send(variable)
 else res.send('Input non alphanumeric')
 
 
